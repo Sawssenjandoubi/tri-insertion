@@ -1,0 +1,18 @@
+PROCEDURE tri_insertion(T: ARRAY_OF integer[],n:integer)
+VAR
+    i,j ,x:integer;
+BEGIN
+   FOR i FROM 1 TO n-1 STEP 1  DO
+            x := T[i] ; 
+            j:=i;
+            WHILE (j>0 AND t[j-1]>x) DO
+                T[j] := T[j - 1];
+                j := j - 1;
+            END_WHILE
+             T[j] := x  ; 
+            END_FOR 
+END
+    
+
+  
+         
