@@ -1,3 +1,24 @@
+FUNCTION read(VAR n:INTEGER):INTEGER
+VAR
+   
+BEGIN
+    REPEAT
+ wrrite("donner longueur");
+read(n);
+    UNTIL (n<=0)
+END
+RETURN n;
+END
+
+PROCEDURE remplir_tab(var t1 : ARRAY_OF INTEGER ,n:INTEGER)
+VAR
+     i:INTEGER;
+BEGIN
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        read(t1[i]);
+      
+    END_FOR
+END
 PROCEDURE tri_insertion(T: ARRAY_OF integer[],n:integer)
 VAR
     i,j ,x:integer;
@@ -11,6 +32,17 @@ BEGIN
             END_WHILE
              T[j] := x  ; 
             END_FOR 
+END
+ALGORITHM tri
+VAR
+    t1: ARRAY_OF INTEGER[100];
+    lg: INTEGER;
+   
+BEGIN
+   lg:=read();
+   remplir_tab(t1,lg) ;
+   tri_insertion(t1,lg);
+  
 END
     
 
